@@ -1,0 +1,188 @@
+/**
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Styles for the Development Lab page.
+ */
+.lab-main {
+  padding-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+.lab-main .page-intro {
+  max-width: 980px;
+}
+
+.lab-main .page-intro h1 {
+  color: var(--aqua);
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.lab-main .page-intro h1 span {
+  display: block;
+  margin-top: 0.4em;
+  color: var(--gold);
+  font-size: 0.55em;
+  line-height: 1.35;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding-top: 2rem;
+}
+
+.lab-card {
+  position: relative;
+  min-width: 0;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border: 1px solid rgba(72, 238, 228, 0.3);
+  border-top: 2px solid var(--gold-soft);
+  background: linear-gradient(145deg, rgba(14, 31, 25, 0.88), rgba(5, 9, 7, 0.94));
+  box-shadow: inset 0 0 24px rgba(72, 238, 228, 0.03), 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.lab-card--security {
+  border-top-color: var(--green);
+}
+
+.lab-card__index {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lab-card h2 {
+  overflow-wrap: anywhere;
+  margin: 0.55rem 0 0;
+  color: var(--aqua);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.lab-card__summary {
+  margin: 0.8rem 0 1rem;
+  color: #c8d7d0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.lab-pattern {
+  margin: 1.5rem 0 0;
+  color: #39FF14;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+.lab-card__category {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.lab-card__status {
+  margin: 1rem 0 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.lab-card__link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: var(--aqua);
+  text-underline-offset: 4px;
+  transition: color 160ms ease, text-shadow 160ms ease;
+}
+
+.lab-card__link:hover {
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(255, 216, 61, 0.3);
+}
+
+.lab-card__link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 5px;
+}
+
+.lab-page .site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px minmax(0, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--aqua);
+  border-radius: 12px;
+  background: var(--ink);
+  box-shadow: 0 0 18px rgba(72, 238, 228, 0.2);
+}
+
+.lab-page .site-footer__brand,
+.lab-page .site-footer__motto {
+  min-width: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
+.lab-page .site-footer__brand {
+  justify-self: start;
+  color: var(--aqua);
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(72, 238, 228, 0.35);
+}
+
+.lab-page .site-footer__logo {
+  display: block;
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+}
+
+.lab-page .site-footer__motto {
+  color: #66ff56;
+  text-align: right;
+  text-shadow: 0 0 10px rgba(81, 255, 89, 0.4);
+}
+
+@media (max-width: 760px) {
+  .lab-page .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  .lab-page .site-footer__brand {
+    justify-self: center;
+  }
+
+  .lab-page .site-footer__logo {
+    width: 110px;
+  }
+
+  .lab-page .site-footer__motto {
+    text-align: center;
+  }
+
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-card__link {
+    transition: none;
+  }
+}
