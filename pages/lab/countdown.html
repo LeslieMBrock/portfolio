@@ -1,0 +1,75 @@
+<!--
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: JavaScript Countdown Lab page.
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050907">
+  <title>JavaScript Countdown Lab | Leslie's Designs</title>
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../../styles/lab.css">
+  <link rel="stylesheet" href="../../../styles/lab-countdown.css">
+  <script src="../../../js/lab-countdown.js" defer></script>
+</head>
+<body class="lab-page countdown-page">
+  <div class="site-shell">
+    <header class="site-header" id="countdown-top">
+      <a class="wordmark" href="../../../index.html#home" aria-label="Leslie's Designs home">
+        <span class="wordmark__name">Leslie's Designs</span>
+        <span class="wordmark__tag">Leslie Brockman</span>
+      </a>
+
+      <details class="nav-disclosure nav-disclosure--responsive">
+        <summary aria-label="Toggle navigation"><span class="nav-disclosure__icon" aria-hidden="true"></span></summary>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="../../../index.html#home">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../portfolio.html">Portfolio</a></li>
+            <li><a href="../../services.html">Designs</a></li>
+            <li><a href="../../lab.html" aria-current="location">Lab</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
+    <main class="countdown-main">
+      <a href="../../lab.html">Back to Development Lab</a>
+      <h1>JavaScript Countdown Lab</h1>
+      <p class="countdown-intro">This experiment demonstrates how JavaScript uses events, application state, and timing functions to create an interactive countdown.</p>
+      <section class="countdown-panel" aria-labelledby="timer-title">
+        <h2 id="timer-title">Try the countdown</h2>
+        <label for="duration">Starting duration (seconds)</label>
+        <input id="duration" type="number" min="1" max="3600" step="1" value="60" aria-describedby="duration-help" disabled>
+        <p id="duration-help" class="countdown-help">Choose 1–3600 whole seconds. Reset before changing duration while running or paused.</p>
+        <p id="countdown-display" class="countdown-display" role="timer" aria-label="Time remaining" aria-live="off">01:00</p>
+        <div class="countdown-controls" role="group" aria-label="Countdown controls">
+          <button id="start" type="button" hidden>Start</button>
+          <button id="pause" type="button" hidden>Pause</button>
+          <button id="resume" type="button" hidden>Resume</button>
+          <button id="reset" type="button" hidden>Reset</button>
+        </div>
+        <p id="timer-status" class="countdown-status" role="status" aria-live="polite" aria-atomic="true">JavaScript is required to run this experiment.</p>
+      </section>
+      <section class="countdown-explanation" aria-labelledby="how-title">
+        <h2 id="how-title">How It Works</h2>
+        <dl>
+          <dt>Event listeners</dt><dd>Button clicks and duration changes tell the timer what to do. Keyboard activation triggers the same button events.</dd>
+          <dt>Application state</dt><dd>The timer stores its mode, selected duration, remaining time, and active interval. Controls reflect whether it is ready, running, paused, or completed.</dd>
+          <dt>Timing functions</dt><dd>An interval refreshes the display. Remaining time comes from a deadline and the browser’s clock, so delayed callbacks do not add extra time.</dd>
+          <dt>Pause and resume</dt><dd>Pause saves the remaining time and clears the interval. Resume creates a new deadline from that saved time.</dd>
+          <dt>Managing intervals</dt><dd>Only one interval should run at once. Clearing it before a new run, on reset, and at zero prevents duplicate updates and keeps state and display synchronized.</dd>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="site-footer__brand" href="../../../index.html#home">Leslie's Designs</a>
+      <img class="site-footer__logo" src="../../../images/leslies-portal.svg" alt="" width="130" height="130">
+      <span class="site-footer__motto">Peace. Love. Code.</span>
+    </footer>
+  </div>
+</body>
+</html>
