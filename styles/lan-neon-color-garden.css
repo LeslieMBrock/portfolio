@@ -1,0 +1,84 @@
+/**
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Styles for the Lab Neon Color Garden page.
+ */
+.garden-page .garden-main { max-width: 980px; margin: auto; padding-block: clamp(2rem, 5vw, 4rem); }
+.garden-page h1, .garden-page h2 { color: var(--aqua); font-family: Georgia, "Times New Roman", serif; font-weight: 500; overflow-wrap: anywhere; }
+.garden-page h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+.garden-page .garden-subtitle { color: var(--gold); font-size: 1.2rem; }
+.garden-page .garden-intro, .garden-page .garden-help { line-height: 1.8; }
+.garden-page .garden-panel { padding: clamp(0.75rem, 3vw, 1.5rem); margin-block: 2rem; border: 1px solid var(--gold-soft); border-radius: 12px; background: var(--ink-soft); }
+.garden-page .garden-palette { display: flex; flex-wrap: wrap; gap: 1rem; min-width: 0; padding: 0; margin: 1rem 0; border: 0; }
+.garden-page legend { margin-bottom: 0.75rem; color: var(--gold); }
+.garden-page button { min-height: 44px; padding: 0.7rem 1rem; border: 1px solid var(--aqua); border-radius: 6px; color: var(--paper); background: var(--ink); font: inherit; cursor: pointer; }
+.garden-page .garden-color {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 1 176px;
+  width: 176px;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 9 / 7;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #050907;
+}
+.garden-page .garden-splat {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--paint);
+  stroke: transparent;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 3px var(--paint));
+  pointer-events: none;
+}
+.garden-page .garden-color__label {
+  position: relative;
+  width: 62%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+.garden-page .garden-color__selected {
+  position: absolute;
+  bottom: 1px;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--gold);
+  font-size: 0.7rem;
+  visibility: hidden;
+  pointer-events: none;
+}
+.garden-page .garden-color--pink { --paint: #FF39C6; }
+.garden-page .garden-color--green { --paint: #39FF14; }
+.garden-page .garden-color--blue { --paint: #00CFFF; }
+.garden-page .garden-color--yellow { --paint: #F9FF33; }
+.garden-page .garden-color--violet { --paint: #B44CFF; }
+.garden-page .garden-color[aria-pressed="true"] .garden-splat {
+  stroke: var(--gold);
+  filter: drop-shadow(0 0 6px var(--paint));
+}
+.garden-page .garden-color[aria-pressed="true"] .garden-color__selected { visibility: visible; }
+.garden-page .garden-color:enabled:hover { background: transparent; }
+.garden-page button:enabled:hover { border-color: var(--gold); }
+.garden-page button:disabled { opacity: 0.6; cursor: default; }
+.garden-page :is(button, canvas):focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.garden-page .garden-surface { position: relative; margin-block: 1.5rem; }
+.garden-page canvas { display: block; width: 100%; height: auto; aspect-ratio: 9 / 5; border: 1px solid var(--line); border-radius: 6px; background: #020806; touch-action: none; }
+.garden-page .garden-cursor { position: absolute; width: 14px; height: 14px; border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 1px black; transform: translate(-50%, -50%); pointer-events: none; display: none; }
+.garden-page .garden-surface:focus-within .garden-cursor { display: block; }
+.garden-page .garden-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.garden-page .garden-status, .garden-page .garden-position { line-height: 1.6; }
+.garden-page .garden-position { color: var(--muted); font-size: 0.85rem; }
+.garden-page .garden-explanation { color: var(--paper); line-height: 1.8; }
+.garden-page .garden-explanation dt { margin-top: 1rem; color: var(--gold); font-weight: 700; }
+.garden-page .garden-explanation dd { margin: 0.25rem 0 0; }
