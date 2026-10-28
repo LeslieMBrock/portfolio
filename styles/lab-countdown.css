@@ -1,0 +1,122 @@
+
+/**
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Styles for the Lab Countdown page.
+ */
+
+.countdown-page .countdown-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.countdown-page h1,
+.countdown-page h2 {
+  color: var(--aqua);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.countdown-page h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  overflow-wrap: anywhere;
+}
+
+.countdown-page .countdown-intro,
+.countdown-page .countdown-explanation {
+  color: var(--paper);
+  line-height: 1.8;
+}
+
+.countdown-page .countdown-panel {
+  margin-block: 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--gold-soft);
+  border-radius: 12px;
+  background: var(--ink-soft);
+  box-shadow: 0 0 24px rgba(255, 216, 61, 0.08);
+}
+
+.countdown-page label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-page input {
+  width: min(100%, 14rem);
+  min-height: 44px;
+  padding: 0.6rem;
+  border: 1px solid var(--aqua);
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+}
+
+.countdown-page .countdown-help {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.countdown-page .countdown-display {
+  margin-block: 1.5rem;
+  color: var(--gold);
+  font-size: clamp(3rem, 14vw, 6rem);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.countdown-page .countdown-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.countdown-page button {
+  min-width: 90px;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--aqua);
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--aqua);
+  font: inherit;
+  cursor: pointer;
+}
+
+.countdown-page button:disabled {
+  border-color: var(--muted);
+  color: var(--muted);
+  cursor: default;
+}
+
+.countdown-page button:enabled:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.countdown-page :is(button, input):focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.countdown-page .countdown-status {
+  min-height: 3.6em;
+  color: var(--paper);
+  line-height: 1.8;
+}
+
+.countdown-page .countdown-explanation dt {
+  margin-top: 1rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.countdown-page .countdown-explanation dd {
+  margin: 0.25rem 0 0;
+}
+
+.countdown-page [hidden] {
+  display: none;
+}
