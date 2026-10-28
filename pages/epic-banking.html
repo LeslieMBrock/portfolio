@@ -1,0 +1,160 @@
+
+<!--
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Epic Hybrid Banking System case study page.
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050907">
+  <meta name="description" content="Leslie Brockman's Epic Hybrid Banking System: an educational C++ and modern Fortran interoperability case study.">
+  <title>Epic Hybrid Banking System | Leslie's Designs</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/portfolio.css">
+  <link rel="stylesheet" href="../styles/epic-banking.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="portfolio-page banking-page">
+  <a class="banking-skip-link" href="#main-content">Skip to case study</a>
+  <canvas class="matrix-rain" aria-hidden="true"></canvas>
+  <div class="site-shell">
+    <header class="site-header" id="case-study-top">
+      <a class="wordmark" href="../index.html#home" aria-label="Leslie's Designs home">
+        <span class="wordmark__name">Leslie's Designs</span>
+        <span class="wordmark__tag">Leslie Brockman</span>
+      </a>
+
+      <details class="nav-disclosure nav-disclosure--responsive">
+        <summary aria-label="Toggle navigation"><span class="nav-disclosure__icon" aria-hidden="true"></span></summary>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" aria-current="location">Portfolio</a></li>
+            <li><a href="services.html">Designs</a></li>
+            <li><a href="lab.html">Lab</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
+
+    <main class="banking-main" id="main-content">
+      <article aria-labelledby="banking-title">
+        <header class="banking-hero">
+          <p class="banking-label">Educational Prototype | C++ + Modern Fortran | 2025</p>
+          <h1 id="banking-title">Epic Hybrid Banking System</h1>
+          <p class="banking-subtitle">Bridging Generations of Technology</p>
+          <p class="banking-statement">Modernization doesn't always have to mean replacement.</p>
+          <p class="banking-byline">An independent experiment by Leslie Brockman</p>
+        </header>
+
+        <section class="banking-section" aria-labelledby="inspiration-title">
+          <p class="banking-label">01 / The question</p>
+          <h2 id="inspiration-title">The Inspiration</h2>
+          <p>The project began with a university assignment involving an array and a three-page IT proposal. I expanded that starting point into an independent experiment inspired by NASA's Voyager spacecraft and the broader challenge of preserving legacy technology.</p>
+          <blockquote>Can modern software communicate with older programming languages without replacing the existing system?</blockquote>
+          <p>The experiment explores software interoperability between C++ and modern Fortran. Voyager provided inspiration for thinking about long-lived systems; this project does not demonstrate compatibility with actual Voyager hardware.</p>
+        </section>
+
+        <section class="banking-section" aria-labelledby="approach-title">
+          <p class="banking-label">02 / Connecting the layers</p>
+          <h2 id="approach-title">The Technical Approach</h2>
+          <p>A C++ application handles accounts and console interaction, while a Fortran calculation layer supplies mathematical routines. A C-compatible interface connects the two languages.</p>
+          <figure class="banking-architecture">
+            <figcaption>Architecture: application to calculation engine</figcaption>
+            <ol class="banking-flow">
+              <li><span class="banking-label">Application</span><strong>C++ Application</strong><span>Accounts and console interaction</span></li>
+              <li><span class="banking-label">Interface</span><strong>C-Compatible Interface</strong><span>Language interoperability</span></li>
+              <li><span class="banking-label">Calculations</span><strong>Fortran Mathematical Engine</strong><span>Interest, charges, and experimental risk simulation</span></li>
+            </ol>
+          </figure>
+          <div class="banking-layers">
+            <section aria-labelledby="cpp-title">
+              <h3 id="cpp-title">C++ application layer</h3>
+              <ul>
+                <li>Account management with checking and savings account classes</li>
+                <li>Object-oriented inheritance and polymorphism</li>
+                <li>Deposits, withdrawals, and account information</li>
+                <li>Console-based user interaction</li>
+              </ul>
+            </section>
+            <section aria-labelledby="fortran-title">
+              <h3 id="fortran-title">Fortran calculation layer</h3>
+              <ul>
+                <li>Interest calculations</li>
+                <li>Service-charge calculations</li>
+                <li>Experimental financial risk simulation</li>
+              </ul>
+            </section>
+            <section aria-labelledby="integration-title">
+              <h3 id="integration-title">Integration</h3>
+              <ul>
+                <li>Fortran <code>ISO_C_BINDING</code></li>
+                <li>C++ <code>extern "C"</code> declarations</li>
+                <li>Shared-library compilation and linking</li>
+                <li>A shell build script</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="banking-section" aria-labelledby="challenges-title">
+          <p class="banking-label">03 / Investigation and learning</p>
+          <h2 id="challenges-title">Development Challenges</h2>
+          <p>Working through modern Fortran with a textbook meant learning a new language while also investigating tooling and compatibility errors in VS Code. Getting the layers to work together required testing, revisiting assumptions, and investigating how each language and its tools handled the interface.</p>
+          <p>I used AI as a debugging and research assistant to investigate errors and explore possible explanations. The precise cause of those errors was not conclusively established. The experience reinforced the importance of checking suggestions through testing and continuing to learn across languages.</p>
+        </section>
+
+        <section class="banking-section" aria-labelledby="results-title">
+          <p class="banking-label">04 / Outcomes and boundaries</p>
+          <h2 id="results-title">Results and Limitations</h2>
+          <div class="banking-results">
+            <section aria-labelledby="achieved-title">
+              <h3 id="achieved-title">Achieved</h3>
+              <ul>
+                <li>Successfully executed the hybrid C++/Fortran application</li>
+                <li>Demonstrated communication between the two languages</li>
+                <li>Implemented banking operations and mathematical integration</li>
+              </ul>
+            </section>
+            <section aria-labelledby="limitations-title">
+              <h3 id="limitations-title">Limitations</h3>
+              <ul>
+                <li>An educational prototype, not a production banking application</li>
+                <li>No claim of security certification or comprehensive testing</li>
+                <li>The Monte Carlo risk-analysis routine remains experimental and requires correction and validation</li>
+                <li>No demonstrated reduction in hardware waste or storage consumption</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="banking-section banking-reflection" aria-labelledby="reflection-title">
+          <p class="banking-label">05 / Looking forward</p>
+          <h2 id="reflection-title">Reflection</h2>
+          <p class="banking-statement"><strong>Modernization doesn't always have to mean replacement.</strong></p>
+          <p>This experiment strengthened my interest in interoperability, legacy software preservation, and using modern tools to extend existing systems. Connecting two languages offered a practical way to explore that idea while learning where further correction and validation are still needed.</p>
+        </section>
+
+        <section class="banking-section" aria-labelledby="source-title">
+          <h2 id="source-title">Explore the Source</h2>
+          <p>Review the educational prototype at the linked repository revision.</p>
+          <div class="banking-actions">
+            <a href="https://github.com/american-nobody999/five-match/tree/deac3d597831bcd6e1f65d9238e206b8169f42e9/Epic_Hybrid_Banking_System" target="_blank" rel="noopener noreferrer">View Source Code on GitHub<span class="banking-link-note"> (opens in a new tab)</span></a>
+            <a href="portfolio.html">Return to Portfolio</a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <a class="site-footer__brand" href="../index.html#home">Leslie's Designs</a>
+      <img class="site-footer__logo" src="../images/leslies-portal.svg" alt="" width="130" height="130">
+      <span class="site-footer__motto">Peace. Love. Code.</span>
+    </footer>
+  </div>
+</body>
+</html>
