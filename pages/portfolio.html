@@ -1,0 +1,159 @@
+
+<!--
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Portfolio page showcasing web development projects, interactive experiences, and creative experiments.
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050907">
+  <meta name="description" content="Web development projects, interactive experiences, and creative experiments from Leslie's Designs.">
+  <title>Portfolio | Leslie's Designs</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/portfolio.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="portfolio-page">
+  <canvas class="matrix-rain" aria-hidden="true"></canvas>
+  <div class="site-shell">
+    <header class="site-header" id="portfolio-top">
+      <a class="wordmark" href="../index.html#home" aria-label="Leslie's Designs home">
+        <span class="wordmark__name">Leslie's Designs</span>
+        <span class="wordmark__tag">Leslie Brockman</span>
+      </a>
+
+      <details class="nav-disclosure nav-disclosure--responsive">
+        <summary aria-label="Toggle navigation"><span class="nav-disclosure__icon" aria-hidden="true"></span></summary>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="services.html">Designs</a></li>
+            <li><a href="lab.html">Lab</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
+
+    <main class="portfolio-main">
+      <section class="page-intro" aria-labelledby="portfolio-title">
+        <p class="page-kicker">Selected work / works in progress</p>
+        <h1 id="portfolio-title">Portfolio <span>Built with Purpose</span></h1>
+        <p>A collection of web development projects, interactive experiences, and creative experiments. Each project represents an opportunity to solve problems, learn new technologies, and build something meaningful.</p>
+      </section>
+
+      <section class="project-grid" aria-label="Portfolio projects">
+        <article class="project-card project-card--featured">
+          <div class="project-visual project-visual--nobody">
+            <img src="../images/port-1.png" alt="American Nobody bilingual web platform homepage screenshot">
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__heading">
+              <p class="project-index">01 / Web platform</p>
+              <span class="status-pill">Live project</span>
+              <h2>American Nobody</h2>
+              <p class="project-subtitle">The MPGA Platform</p>
+            </div>
+            <p class="project-description">An independently developed bilingual web platform combining advocacy, educational resources, interactive experiences, and organized content archives.</p>
+            <h3>Features</h3>
+            <ul class="feature-list">
+              <li>English and Arabic language support</li>
+              <li>Right-to-left layout handling</li>
+              <li>Interactive image galleries</li>
+              <li>Custom navigation and content archives</li>
+              <li>JavaScript-powered interactive features</li>
+            </ul>
+            <div class="project-meta">
+              <h3>Technologies</h3>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive design</li>
+                <li>GitHub Pages</li>
+              </ul>
+            </div>
+            <div class="project-links" aria-label="American Nobody project links">
+              <a href="https://github.com/american-nobody999/One-match" target="_blank" rel="noopener noreferrer">American Nobody (one-match)</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual project-visual--games">
+            <img
+              src="../images/port-2.png"
+              alt="Flipping the World for Palestine interactive flag identification game"
+              loading="lazy"
+            >
+            <img
+              src="../images/port-3.png"
+              alt="MPGA Education interactive Recess page featuring a gift box activity"
+              loading="lazy"
+            >
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__heading">
+              <p class="project-index">02 / Interactive collection</p>
+              <span class="status-pill">Interactive Projects</span>
+              <h2>JavaScript Interactive Games</h2>
+            </div>
+            <p class="project-description">Browser-based interactive projects exploring JavaScript event handling, state management, animations, and user interaction.</p>
+            <h3>Featured Interactive Projects</h3>
+            <ul class="feature-list">
+              <li>Flipping the World for Palestine</li>
+              <li>MPGA Education — Recess</li>
+              <li>Rock with a Humanitarian</li>
+            </ul>
+            <div class="project-meta">
+              <h3>Focus areas</h3>
+              <ul class="tag-list" aria-label="Project focus areas">
+                <li>JavaScript</li>
+                <li>Events</li>
+                <li>State</li>
+                <li>Interaction</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--concept">
+          <div class="project-visual project-visual--memorial">
+            <span>C++ ↔ Fortran</span>
+            <small>Bridging Generations of Technology</small>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__heading">
+              <p class="project-index">03 / Case Study</p>
+              <span class="status-pill status-pill--concept">Case Study / C++ + Modern Fortran</span>
+              <h2>Epic Hybrid Banking System</h2>
+            </div>
+            <p class="project-description">An independent educational prototype exploring interoperability between a C++ banking application and a modern Fortran calculation layer. Inspired by legacy technology preservation and the Voyager spacecraft.</p>
+            <div class="project-meta">
+              <h3>Technologies</h3>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>C++</li>
+                <li>Modern Fortran</li>
+                <li>ISO_C_BINDING</li>
+                <li>Object-Oriented Programming</li>
+                <li>Cross-Language Integration</li>
+              </ul>
+            </div>
+            <a class="preview-link" href="epic-banking.html" aria-label="Read Case Study: Epic Hybrid Banking System">Read Case Study</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="site-footer__brand" href="../index.html#home">Leslie's Designs</a>
+      <img class="site-footer__logo" src="../images/leslies-portal.svg" alt="" width="130" height="130">
+      <span class="site-footer__motto">Peace. Love. Code.</span>
+    </footer>
+  </div>
+</body>
+</html>
