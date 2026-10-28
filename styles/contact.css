@@ -1,0 +1,286 @@
+
+/**
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Styles for the Contact page of Leslie's Designs.
+ */
+
+.contact-page {
+  background:
+    radial-gradient(ellipse at 83% 17%, rgba(9, 74, 73, 0.16), transparent 36%),
+    radial-gradient(ellipse at 12% 72%, rgba(71, 89, 20, 0.11), transparent 33%),
+    var(--ink);
+}
+
+.contact-main {
+  overflow: hidden;
+  padding-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+.contact-intro {
+  position: relative;
+  min-height: 350px;
+  padding: clamp(4rem, 9vw, 6.5rem) clamp(0.5rem, 6vw, 4.5rem);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+}
+
+.contact-intro::before,
+.contact-orbit {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: -3rem;
+  width: clamp(210px, 34vw, 370px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 216, 61, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(255, 216, 61, 0.028), 0 0 0 25px rgba(72, 238, 228, 0.022), inset 0 0 38px rgba(72, 238, 228, 0.06), 0 0 38px rgba(255, 216, 61, 0.07);
+  pointer-events: none;
+}
+
+.contact-intro::before {
+  content: "";
+}
+
+.contact-index {
+  margin: 0;
+  color: var(--green);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.contact-kicker {
+  position: relative;
+  width: 100%;
+  margin: 0 0 0.75rem;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(72, 238, 228, 0.35);
+  overflow-wrap: anywhere;
+}
+
+.contact-intro h1 {
+  position: relative;
+  max-width: 780px;
+  margin: 0.65rem 0 0;
+  color: var(--aqua);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 6.5vw, 4.7rem);
+  font-weight: 500;
+  line-height: 1.12;
+  text-shadow: 0 0 22px rgba(72, 238, 228, 0.22);
+}
+
+.contact-intro > p:not(.contact-kicker, .contact-tagline) {
+  position: relative;
+  max-width: 740px;
+  margin: 1.15rem 0 0;
+  color: #d3e1da;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.8;
+}
+
+.contact-tagline {
+  margin: 1rem 0 0;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-shadow: 0 0 12px rgba(255, 216, 61, 0.25);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(3rem, 7vw, 5rem) clamp(0.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-details__heading h2,
+.contact-status h2 {
+  margin: 0.6rem 0 0;
+  color: var(--aqua);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.contact-index {
+  color: var(--gold);
+  font-size: 0.64rem;
+}
+
+.contact-details__heading > p:last-child {
+  max-width: 420px;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.contact-list {
+  margin: 0;
+  border-top: 1px solid rgba(72, 238, 228, 0.3);
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.72fr) minmax(0, 1.28fr);
+  gap: 1rem;
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid rgba(72, 238, 228, 0.2);
+}
+
+.contact-item dt {
+  color: var(--aqua);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.contact-item dd {
+  margin: 0;
+  color: #c8d7d0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-page .contact-list a[href^="mailto:"] {
+  color: #00CFFF;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  text-underline-offset: 3px;
+}
+
+.contact-page .contact-list a[href^="mailto:"]:hover {
+  color: #FFD83D;
+  text-shadow: 0 0 8px rgba(255, 216, 61, 0.35);
+}
+
+.contact-page .contact-list a[href^="mailto:"]:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.contact-status {
+  max-width: 850px;
+  margin: clamp(2.5rem, 6vw, 4.5rem) auto 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--gold-soft);
+  background: linear-gradient(135deg, rgba(15, 31, 24, 0.82), rgba(5, 9, 7, 0.94));
+  box-shadow: inset 0 0 30px rgba(72, 238, 228, 0.025), 0 0 22px rgba(255, 216, 61, 0.06);
+}
+
+.contact-status > p:last-child {
+  max-width: 730px;
+  margin: 0.9rem 0 0;
+  color: #c8d7d0;
+  line-height: 1.8;
+}
+
+.contact-page .site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px minmax(0, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--aqua);
+  border-radius: 12px;
+  background: var(--ink);
+  box-shadow: 0 0 18px rgba(72, 238, 228, 0.2);
+}
+
+.contact-page .site-footer__brand,
+.contact-page .site-footer__motto {
+  min-width: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
+.contact-page .site-footer__brand {
+  justify-self: start;
+  color: var(--aqua);
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(72, 238, 228, 0.35);
+}
+
+.contact-page .site-footer__logo {
+  display: block;
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+}
+
+.contact-page .site-footer__motto {
+  color: #66ff56;
+  text-align: right;
+  text-shadow: 0 0 10px rgba(81, 255, 89, 0.4);
+}
+
+@media (max-width: 760px) {
+  .contact-page .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  .contact-page .site-footer__brand {
+    justify-self: center;
+  }
+
+  .contact-page .site-footer__logo {
+    width: 110px;
+  }
+
+  .contact-page .site-footer__motto {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-intro::before,
+  .contact-orbit {
+    right: -8rem;
+    opacity: 0.65;
+  }
+
+  .contact-intro h1,
+  .contact-intro > p:not(.contact-kicker, .contact-tagline) {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 460px) {
+  .contact-intro {
+    min-height: 0;
+    padding-block: 3.5rem;
+  }
+
+  .contact-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding-inline: 0.25rem;
+  }
+
+  .contact-status {
+    margin-inline: 0.25rem;
+  }
+}
