@@ -1,0 +1,87 @@
+
+<!--
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Programming Challenges Lab page.
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050907">
+  <title>Programming Challenges | Leslie's Designs</title>
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../../styles/lab.css">
+  <link rel="stylesheet" href="../../../styles/lab-programming-challenges.css">
+  <script src="../../../js/lab-programming-challenges.js" defer></script>
+</head>
+<body class="lab-page challenges-page">
+  <div class="site-shell">
+    <header class="site-header" id="challenges-top">
+      <a class="wordmark" href="../../../index.html#home" aria-label="Leslie's Designs home">
+        <span class="wordmark__name">Leslie's Designs</span>
+        <span class="wordmark__tag">Leslie Brockman</span>
+      </a>
+
+      <details class="nav-disclosure nav-disclosure--responsive">
+        <summary aria-label="Toggle navigation"><span class="nav-disclosure__icon" aria-hidden="true"></span></summary>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="../../../index.html#home">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../portfolio.html">Portfolio</a></li>
+            <li><a href="../../services.html">Designs</a></li>
+            <li><a href="../../lab.html" aria-current="location">Lab</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
+    <main class="challenges-main">
+      <a href="../../lab.html">Back to Development Lab</a>
+      <h1>Programming Challenges</h1>
+      <p class="challenges-subtitle">Think. Solve. Learn. <span class="challenge-peace" aria-hidden="true">☮</span></p>
+      <p class="challenges-intro">Programming is more than writing code. It's learning how to break problems into smaller steps, recognize patterns, and find solutions. Try these little challenges and see how your logic holds up!</p>
+      <p id="challenge-loading">JavaScript is required to run these challenges.</p>
+      <section id="challenge-panel" class="challenge-panel" aria-labelledby="challenge-title" hidden>
+        <p id="challenge-progress" class="challenge-progress"></p>
+        <h2 id="challenge-title" tabindex="-1"></h2>
+        <pre class="challenge-code"><code id="challenge-code"></code></pre>
+        <form id="challenge-form">
+          <fieldset>
+            <legend id="challenge-question"></legend>
+            <div id="challenge-choices" class="challenge-choices"></div>
+          </fieldset>
+          <div class="challenge-actions">
+            <button id="challenge-submit" type="submit">Submit Answer</button>
+            <button id="challenge-next" type="button" hidden>Next Challenge</button>
+          </div>
+        </form>
+        <p id="challenge-feedback" class="challenge-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+      <section id="challenge-results" class="challenge-panel challenge-results" aria-labelledby="challenge-result-title" hidden>
+        <h2 id="challenge-result-title" tabindex="-1">Challenges complete!</h2>
+        <p id="challenge-score"></p>
+        <p>Every great developer starts by solving one problem at a time. Keep experimenting!</p>
+        <button id="challenge-restart" type="button">Restart Challenges</button>
+      </section>
+      <section class="challenge-explanation" aria-labelledby="challenge-how-title">
+        <h2 id="challenge-how-title">How It Works</h2>
+        <dl>
+          <dt>Event Listeners</dt><dd>Visitors select an answer using radio inputs. JavaScript listens for form submissions and button clicks, connecting the interface controls to the quiz's behavior.</dd>
+          <dt>Arrays and Objects</dt><dd>The challenges are organized as JavaScript data. Each question contains its possible answers, the correct answer, and an explanation. This makes it easier to manage multiple challenges without repeating the same code.</dd>
+          <dt>Conditional Logic</dt><dd>When an answer is submitted, JavaScript checks whether the selected option matches the correct answer. Conditional statements determine which feedback to display.</dd>
+          <dt>Application State</dt><dd>The program keeps track of the current challenge, whether it has been submitted, whether the quiz is complete, and the score. The selected answer is read from the radio inputs. This information determines what the visitor sees as they progress.</dd>
+          <dt>Functions and DOM Updates</dt><dd>JavaScript functions coordinate the quiz, including displaying questions, checking answers, and updating the interface. The Document Object Model (DOM) allows JavaScript to change the visible page without reloading it.</dd>
+          <dt>Reset and Replay</dt><dd>When visitors restart the challenges, JavaScript resets the quiz state, clears previous selections and feedback, and returns to the first question.</dd>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="site-footer__brand" href="../../../index.html#home">Leslie's Designs</a>
+      <img class="site-footer__logo" src="../../../images/leslies-portal.svg" alt="" width="130" height="130">
+      <span class="site-footer__motto">Peace. Love. Code.</span>
+    </footer>
+  </div>
+</body>
+</html>
