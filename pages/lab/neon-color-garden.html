@@ -1,0 +1,85 @@
+
+<!--
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Neon Color Garden Lab page.
+ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050907">
+  <title>Neon Color Garden | Leslie's Designs</title>
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../../styles/lab.css">
+  <link rel="stylesheet" href="../../../styles/lab-neon-color-garden.css">
+  <script src="../../../js/lab-neon-color-garden.js" defer></script>
+</head>
+<body class="lab-page garden-page">
+  <div class="site-shell">
+    <header class="site-header" id="garden-top">
+      <a class="wordmark" href="../../../index.html#home" aria-label="Leslie's Designs home">
+        <span class="wordmark__name">Leslie's Designs</span>
+        <span class="wordmark__tag">Leslie Brockman</span>
+      </a>
+
+      <details class="nav-disclosure nav-disclosure--responsive">
+        <summary aria-label="Toggle navigation"><span class="nav-disclosure__icon" aria-hidden="true"></span></summary>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="../../../index.html#home">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../portfolio.html">Portfolio</a></li>
+            <li><a href="../../services.html">Designs</a></li>
+            <li><a href="../../lab.html" aria-current="location">Lab</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
+    <main class="garden-main">
+      <a href="../../lab.html">Back to Development Lab</a>
+      <h1>Neon Color Garden</h1>
+      <p class="garden-subtitle">A Little Color. A Little Chaos.</p>
+      <p class="garden-intro">Explore color, creativity, and JavaScript interaction in this playful neon garden. Choose your colors, make a splash, and watch your canvas come alive!</p>
+      <section class="garden-panel" aria-labelledby="garden-paint-title">
+        <h2 id="garden-paint-title">Make a splash</h2>
+        <fieldset class="garden-palette">
+          <legend>Choose a neon color</legend>
+          <button class="garden-color garden-color--pink" type="button" data-paint="pink" aria-pressed="false" disabled><svg class="garden-splat" viewBox="0 0 180 140" aria-hidden="true" focusable="false"><path d="M149.3 64.0Q158.0 67.0 165.7 71.9Q173.3 76.7 164.8 79.9Q156.4 83.0 148.8 84.8Q141.2 86.6 140.1 90.4Q139.0 94.2 135.4 97.1Q131.7 99.9 128.8 104.0Q125.8 108.0 121.8 112.9Q117.9 117.7 109.7 114.1Q101.6 110.4 95.8 105.4Q90.0 100.3 84.2 105.4Q78.4 110.4 70.3 114.1Q62.1 117.7 58.2 112.9Q54.2 108.0 51.2 104.0Q48.3 99.9 44.6 97.1Q41.0 94.2 39.9 90.4Q38.8 86.6 31.2 84.8Q23.6 83.0 15.2 79.9Q6.7 76.7 14.3 71.9Q22.0 67.0 30.7 64.0Q39.4 61.1 34.0 56.6Q28.6 52.2 26.0 46.9Q23.5 41.6 29.1 39.0Q34.8 36.4 39.6 33.7Q44.3 31.0 51.0 30.5Q57.8 30.1 64.6 31.6Q71.4 33.1 74.7 27.5Q77.9 21.8 84.0 16.0Q90.0 10.3 96.0 16.0Q102.1 21.8 105.3 27.5Q108.6 33.1 115.4 31.6Q122.2 30.1 129.0 30.5Q135.7 31.0 140.4 33.7Q145.2 36.4 150.9 39.0Q156.5 41.6 154.0 46.9Q151.4 52.2 146.0 56.6Q140.6 61.1 149.3 64.0Z"/><circle cx="15" cy="21" r="3"/><circle cx="163" cy="111" r="4"/><ellipse cx="146" cy="13" rx="3" ry="5"/></svg><span class="garden-color__label">Electric Pink</span><span class="garden-color__selected" aria-hidden="true">✓ Selected</span></button>
+          <button class="garden-color garden-color--green" type="button" data-paint="green" aria-pressed="false" disabled><svg class="garden-splat" viewBox="0 0 180 140" aria-hidden="true" focusable="false"><path d="M158.5 63.7Q170.7 67.0 169.6 71.6Q168.5 76.2 158.0 78.5Q147.5 80.9 145.1 84.0Q142.7 87.1 141.5 91.0Q140.3 94.9 136.7 98.0Q133.2 101.1 131.2 106.5Q129.2 111.9 122.7 113.2Q116.1 114.5 107.8 108.5Q99.5 102.5 94.7 103.3Q90.0 104.1 83.2 111.1Q76.4 118.1 69.9 116.8Q63.3 115.5 60.2 110.1Q57.2 104.6 52.8 102.2Q48.4 99.8 45.8 96.4Q43.1 93.0 39.2 90.5Q35.3 87.9 24.7 86.6Q14.1 85.3 13.2 80.7Q12.4 76.1 23.5 71.5Q34.7 67.0 34.6 63.8Q34.6 60.5 27.2 55.3Q19.7 50.1 22.3 46.1Q25.0 42.1 30.5 39.6Q36.1 37.1 40.9 34.6Q45.8 32.1 53.5 33.0Q61.2 34.0 65.4 31.9Q69.6 29.9 72.7 21.9Q75.8 13.9 82.9 14.0Q90.0 14.1 95.0 21.8Q100.0 29.4 104.9 30.2Q109.8 30.9 117.5 28.8Q125.2 26.7 130.5 28.8Q135.9 30.8 141.6 33.0Q147.3 35.2 150.2 39.0Q153.1 42.9 147.5 48.7Q141.9 54.5 144.1 57.5Q146.3 60.4 158.5 63.7Z"/><circle cx="15" cy="21" r="3"/><circle cx="163" cy="111" r="4"/><ellipse cx="146" cy="13" rx="3" ry="5"/></svg><span class="garden-color__label">Neon Green</span><span class="garden-color__selected" aria-hidden="true">✓ Selected</span></button>
+          <button class="garden-color garden-color--blue" type="button" data-paint="blue" aria-pressed="false" disabled><svg class="garden-splat" viewBox="0 0 180 140" aria-hidden="true" focusable="false"><path d="M167.2 63.0Q174.9 67.0 166.2 70.9Q157.6 74.9 151.1 77.5Q144.6 80.1 145.2 84.3Q145.9 88.4 143.4 91.8Q140.8 95.2 138.8 99.5Q136.7 103.8 133.5 108.5Q130.3 113.1 121.1 110.1Q112.0 107.0 105.4 103.5Q98.8 99.9 94.4 106.3Q90.0 112.6 82.9 116.6Q75.7 120.6 70.9 115.6Q66.0 110.6 62.1 107.0Q58.2 103.4 53.6 101.4Q49.1 99.3 46.4 96.0Q43.7 92.7 35.5 91.8Q27.3 91.0 19.2 88.5Q11.1 86.0 18.3 80.3Q25.5 74.5 32.2 70.8Q38.9 67.0 31.3 63.1Q23.7 59.3 20.2 54.3Q16.8 49.4 22.4 46.4Q28.1 43.4 32.4 40.4Q36.6 37.4 43.0 36.1Q49.3 34.9 55.8 35.0Q62.3 35.2 63.9 28.8Q65.5 22.4 70.3 16.9Q75.2 11.3 82.6 17.0Q90.0 22.6 94.7 27.3Q99.3 32.0 105.9 29.0Q112.5 26.1 119.4 25.8Q126.2 25.5 131.3 27.9Q136.5 30.3 142.2 32.6Q147.9 34.9 146.5 40.4Q145.1 46.0 142.0 50.6Q138.9 55.2 149.2 57.1Q159.4 58.9 167.2 63.0Z"/><circle cx="15" cy="21" r="3"/><circle cx="163" cy="111" r="4"/><ellipse cx="146" cy="13" rx="3" ry="5"/></svg><span class="garden-color__label">Cyber Blue</span><span class="garden-color__selected" aria-hidden="true">✓ Selected</span></button>
+          <button class="garden-color garden-color--yellow" type="button" data-paint="yellow" aria-pressed="false" disabled><svg class="garden-splat" viewBox="0 0 180 140" aria-hidden="true" focusable="false"><path d="M169.7 62.3Q168.4 67.0 158.4 70.4Q148.5 73.8 147.8 77.3Q147.2 80.8 147.5 84.9Q147.9 89.1 145.2 92.6Q142.5 96.2 141.5 101.5Q140.4 106.8 133.8 108.2Q127.1 109.6 117.7 104.8Q108.2 100.1 104.1 102.4Q100.0 104.7 95.0 112.4Q90.0 120.1 83.3 118.7Q76.6 117.4 72.3 112.1Q68.1 106.8 63.1 105.2Q58.1 103.6 54.2 101.0Q50.3 98.3 45.2 96.5Q40.2 94.6 29.9 94.3Q19.5 93.9 18.7 89.2Q17.9 84.4 27.5 78.8Q37.2 73.2 34.8 70.1Q32.4 67.0 23.5 62.6Q14.6 58.2 17.0 54.1Q19.4 50.0 24.7 47.1Q30.1 44.1 34.2 41.2Q38.4 38.3 45.7 38.1Q53.0 37.8 56.1 34.7Q59.1 31.6 60.4 23.6Q61.7 15.5 69.1 15.8Q76.4 16.1 83.2 23.1Q90.0 30.1 95.1 29.4Q100.2 28.7 107.4 25.5Q114.6 22.3 120.3 24.0Q126.1 25.7 131.9 27.5Q137.7 29.4 141.0 33.1Q144.4 36.8 140.8 42.9Q137.3 48.9 141.5 51.3Q145.7 53.6 158.4 55.6Q171.1 57.5 169.7 62.3Z"/><circle cx="15" cy="21" r="3"/><circle cx="163" cy="111" r="4"/><ellipse cx="146" cy="13" rx="3" ry="5"/></svg><span class="garden-color__label">Laser Yellow</span><span class="garden-color__selected" aria-hidden="true">✓ Selected</span></button>
+          <button class="garden-color garden-color--violet" type="button" data-paint="violet" aria-pressed="false" disabled><svg class="garden-splat" viewBox="0 0 180 140" aria-hidden="true" focusable="false"><path d="M165.0 62.1Q156.5 67.0 151.4 70.3Q146.3 73.6 148.9 77.7Q151.5 81.8 150.1 85.6Q148.7 89.4 147.5 93.8Q146.3 98.2 143.6 102.7Q140.9 107.2 131.0 104.9Q121.1 102.7 114.3 100.7Q107.5 98.8 104.9 106.2Q102.4 113.5 96.2 117.6Q90.0 121.7 84.0 116.7Q78.1 111.7 73.4 108.7Q68.7 105.8 63.4 104.7Q58.1 103.5 54.2 100.9Q50.2 98.4 41.8 98.4Q33.3 98.5 25.7 96.5Q18.2 94.5 24.4 87.9Q30.7 81.3 35.1 77.1Q39.6 72.9 30.0 69.9Q20.5 67.0 16.4 62.5Q12.4 57.9 18.0 54.5Q23.7 51.0 27.3 47.7Q30.9 44.4 36.5 42.4Q42.1 40.4 47.8 39.3Q53.5 38.2 53.3 31.5Q53.1 24.7 57.0 19.5Q61.0 14.2 69.9 19.5Q78.8 24.9 84.4 28.3Q90.0 31.7 95.9 27.4Q101.7 23.1 108.4 22.1Q115.2 21.2 120.7 23.4Q126.1 25.6 131.9 27.5Q137.6 29.4 137.6 35.0Q137.5 40.6 136.7 45.0Q135.9 49.5 147.2 50.0Q158.5 50.5 166.0 53.9Q173.5 57.3 165.0 62.1Z"/><circle cx="15" cy="21" r="3"/><circle cx="163" cy="111" r="4"/><ellipse cx="146" cy="13" rx="3" ry="5"/></svg><span class="garden-color__label">Neon Violet</span><span class="garden-color__selected" aria-hidden="true">✓ Selected</span></button>
+        </fieldset>
+        <p id="garden-help" class="garden-help">Click or tap to place a paint dab. Drag to connect dabs into a stroke. Keyboard: Tab to the canvas, use arrow keys to move the white cursor, then press Space to paint. Clear removes paint; Reset also returns to Electric Pink and centers the keyboard cursor.</p>
+        <div class="garden-surface">
+          <canvas id="garden-canvas" width="900" height="500" tabindex="0" role="img" aria-label="Interactive neon painting canvas" aria-describedby="garden-help garden-position">Your browser needs canvas support to display the painting.</canvas>
+          <span id="garden-cursor" class="garden-cursor" aria-hidden="true"></span>
+        </div>
+        <p id="garden-position" class="garden-position" aria-live="polite"></p>
+        <div class="garden-actions">
+          <button id="garden-clear" type="button" disabled>Clear painting</button>
+          <button id="garden-reset" type="button" disabled>Reset garden</button>
+        </div>
+        <p id="garden-status" class="garden-status" role="status" aria-live="polite" aria-atomic="true">JavaScript is required to paint in this garden.</p>
+      </section>
+      <section class="garden-explanation" aria-labelledby="garden-how-title">
+        <h2 id="garden-how-title">How It Works</h2>
+        <dl>
+          <dt>Event Listeners</dt><dd>Pointer events handle mouse, pen, and touch painting. Button clicks select colors or clear the canvas; keyboard events move the cursor and place paint dabs.</dd>
+          <dt>Color Selection</dt><dd>A variable stores the selected neon color. The palette shows which button is pressed, and each new dab or stroke uses that color.</dd>
+          <dt>Position and Coordinates</dt><dd>The program converts pointer coordinates into the canvas's fixed 900 by 500 drawing space. Arrow keys move a bounded keyboard position in that same space.</dd>
+          <dt>Dynamic Rendering</dt><dd>JavaScript draws round dabs and connected strokes with the canvas drawing API, adding a small neon glow. These marks appear immediately without reloading the page.</dd>
+          <dt>Application State</dt><dd>The game tracks the selected color, active pointer, previous stroke position, and keyboard position. Existing paint stays in the canvas pixels rather than a list of splats. Clear removes those pixels; Reset also restores the initial color and keyboard position.</dd>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="site-footer__brand" href="../../../index.html#home">Leslie's Designs</a>
+      <img class="site-footer__logo" src="../../../images/leslies-portal.svg" alt="" width="130" height="130">
+      <span class="site-footer__motto">Peace. Love. Code.</span>
+    </footer>
+  </div>
+</body>
+</html>
