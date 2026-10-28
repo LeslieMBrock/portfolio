@@ -1,0 +1,46 @@
+/**
+ * Author: Leslie Brockman | Leslie's Designs | 2026
+ * Description: Styles for the Programming Challenges Lab page.
+ */
+.challenges-page .challenges-main { max-width: 900px; margin: auto; padding-block: clamp(2rem, 5vw, 4rem); }
+.challenges-page h1, .challenges-page h2 { color: var(--aqua); font-family: Georgia, "Times New Roman", serif; font-weight: 500; overflow-wrap: anywhere; }
+.challenges-page h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+.challenges-page .challenges-subtitle { color: var(--gold); font-size: 1.2rem; }
+.challenges-page .challenges-intro { line-height: 1.8; }
+.challenges-page .challenge-panel { margin-block: 2rem; padding: clamp(1rem, 4vw, 2rem); border: 1px solid var(--gold-soft); border-radius: 12px; background: var(--ink-soft); }
+.challenges-page .challenge-progress { color: var(--gold); font-size: 0.85rem; }
+.challenges-page .challenge-code { max-width: 100%; padding: 1rem; border: 1px solid var(--line); border-radius: 6px; background: var(--ink); color: var(--paper); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.7; }
+.challenges-page fieldset { min-width: 0; margin: 1.25rem 0; padding: 0; border: 0; }
+.challenges-page legend { padding: 0; margin-bottom: 0.75rem; line-height: 1.6; }
+.challenges-page .challenge-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.challenges-page .challenge-choice { display: flex; align-items: center; gap: 0.75rem; min-height: 48px; padding: 0.8rem; border: 1px solid var(--muted); border-radius: 6px; background: var(--ink); cursor: pointer; overflow-wrap: anywhere; }
+.challenges-page .challenge-choice:has(input:checked) { border-color: var(--gold); background: #243225; box-shadow: inset 3px 0 var(--gold); }
+.challenges-page .challenge-choice:has(input:enabled):hover { border-color: var(--aqua); }
+.challenges-page input { width: 20px; height: 20px; margin: 0; flex-shrink: 0; accent-color: var(--gold); }
+.challenges-page .challenge-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.challenges-page button { min-height: 44px; padding: 0.7rem 1rem; border: 1px solid var(--aqua); border-radius: 6px; color: var(--aqua); background: var(--ink); font: inherit; cursor: pointer; }
+.challenges-page button:enabled:hover { color: var(--gold); border-color: var(--gold); }
+.challenges-page button:disabled { color: var(--muted); border-color: var(--muted); cursor: default; }
+.challenges-page :is(button, input, h2):focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.challenges-page .challenge-feedback { min-height: 3.6em; line-height: 1.8; }
+.challenges-page .challenge-results { line-height: 1.8; }
+.challenges-page .challenge-peace { color: var(--gold); font-size: 1.65rem; text-shadow: 0 0 12px rgba(255, 216, 61, 0.62); }
+.challenges-page [hidden] { display: none; }
+@media (max-width: 760px) {
+  .challenges-page .challenge-choices { grid-template-columns: minmax(0, 1fr); }
+}
+
+.challenges-page .challenge-explanation {
+  color: var(--paper);
+  line-height: 1.8;
+}
+
+.challenges-page .challenge-explanation dt {
+  margin-top: 1rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.challenges-page .challenge-explanation dd {
+  margin: 0.25rem 0 0;
+}
